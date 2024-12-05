@@ -9,7 +9,7 @@ interface AddButtonProps {
 
 const AddButton: React.FC<AddButtonProps> = ({ text, className }) => {
   return (
-    <div className='m-2'>
+    <div className=''>
       <Button className={className}>
         <Plus/> {text}
       </Button>

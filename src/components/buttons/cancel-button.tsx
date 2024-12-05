@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 const CancelButton: React.FC = () => {
     return (
-        <div className='m-2'>
+        <div className=''>
             <Button variant={'secondary'} className="">
                 <Trash2/> Cancel
             </Button>
