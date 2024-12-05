@@ -1,17 +1,18 @@
 import React from 'react';
+import { Plus } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 
 interface AddButtonProps {
   text: string;
+  className?: string;
 }
 
-const AddButton: React.FC<AddButtonProps> = ({ text }) => {
+const AddButton: React.FC<AddButtonProps> = ({ text, className }) => {
   return (
-    <Button>
-      + {text}
+    <Button className={className}>
+      <Plus/> {text}
     </Button>
   );
 };
 
 export default AddButton;
-
