@@ -48,7 +48,7 @@ export function AddCategoryPopupButton() {
           <DialogClose asChild>
             <div className="flex flex-row-reverse w-full space-x-2 space-x-reverse">
               <Button>Add</Button>
-              <CancelButton/>
+              <Button variant="secondary">Cancel</Button>
             </div>
           </DialogClose>
         </DialogFooter>
