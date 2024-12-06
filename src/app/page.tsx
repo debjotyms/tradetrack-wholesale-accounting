@@ -6,6 +6,7 @@ import ForwardButton from "@/components/buttons/forward-button";
 import { SavePrintButton } from "@/components/buttons/save-and-print-button";
 import { SaveButton } from "@/components/buttons/save-button";
 import SearchButton from "@/components/buttons/search-button";
+import UndoButton from "@/components/buttons/undo-button";
 import { AddCategoryPopupButton } from "@/components/popups/add-category-popup-button";
 import { DeleteConfirmationPopupButton } from "@/components/popups/delete-confirmation-popup-button";
 import Image from "next/image";
@@ -28,6 +29,7 @@ export default function Home() {
         <SaveButton/>
         <SavePrintButton/>
         <SearchButton/>
+        <UndoButton/>
       </div>
       
       <div className='h-16 bg-black m-2 rounded-md mt-10'>
