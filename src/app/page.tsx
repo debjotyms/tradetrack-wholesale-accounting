@@ -1,5 +1,6 @@
 import AddButton from "@/components/buttons/add-button";
 import CancelButton from "@/components/buttons/cancel-button";
+import DeleteButton from "@/components/buttons/delete-button";
 import { AddCategoryPopupButton } from "@/components/popups/add-category-popup-button";
 import Image from "next/image";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="flex items-center flex-col space-y-2">
         <AddButton text="Add me please!"/>
         <CancelButton/>
+        <DeleteButton/>
       </div>
       
       <div className='h-16 bg-black m-2 rounded-md mt-10'>
