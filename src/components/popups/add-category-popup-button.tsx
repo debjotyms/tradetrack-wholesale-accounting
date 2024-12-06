@@ -36,7 +36,7 @@ export function AddCategoryPopupButton() {
         </div>
         <div className="flex items-center space-x-2">
           <div className="grid flex-1 gap-2">
-            <CustomLabeledInput label={"Category Name"} labelBasis={"1/3"} inputBasis={"2/3"}/>
+            <CustomLabeledInput label={"Category Name"} labelBasis={"[50%]"} inputBasis={"[50%]"}/>
           </div>
         </div>
         <DialogFooter className="sm:justify-start">
