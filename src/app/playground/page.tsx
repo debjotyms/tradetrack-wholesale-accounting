@@ -12,10 +12,7 @@ const Playground: React.FC = () => {
       </div>
 
       {/* Write you code here. Don't push this file. */}
-      <div className='flex flex-row border-0 border-red-500 h-10 mx-2 rounded-md'>
-        <div className='basis-1/4 bg-slate-200 rounded-s-md flex pl-3 items-center'>Category Name</div>
-        <Input className='h-10 rounded-s-none basis-3/4'></Input>
-      </div>
+      
     </>
 
   );
