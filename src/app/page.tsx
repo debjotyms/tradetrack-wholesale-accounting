@@ -3,6 +3,7 @@ import CancelButton from "@/components/buttons/cancel-button";
 import DeleteButton from "@/components/buttons/delete-button";
 import EditButton from "@/components/buttons/edit-button";
 import { AddCategoryPopupButton } from "@/components/popups/add-category-popup-button";
+import { DeleteConfirmationPopupButton } from "@/components/popups/delete-confirmation-popup-button";
 import Image from "next/image";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
 
       <div className="flex items-center flex-col space-y-2">
         <AddCategoryPopupButton/>
+        <DeleteConfirmationPopupButton/>
       </div>
     </>
   );

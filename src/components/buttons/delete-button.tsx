@@ -6,7 +6,7 @@ const DeleteButton: React.FC = () => {
     return (
         <div className=''>
             <Button variant={'secondary'} className="">
-                <Trash2/>
+                <Trash2/> Delete
             </Button>
         </div>
     );
