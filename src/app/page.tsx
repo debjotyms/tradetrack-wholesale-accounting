@@ -2,6 +2,7 @@ import AddButton from "@/components/buttons/add-button";
 import CancelButton from "@/components/buttons/cancel-button";
 import DeleteButton from "@/components/buttons/delete-button";
 import EditButton from "@/components/buttons/edit-button";
+import FiltersButton from "@/components/buttons/filters-button";
 import ForwardButton from "@/components/buttons/forward-button";
 import { SavePrintButton } from "@/components/buttons/save-and-print-button";
 import { SaveButton } from "@/components/buttons/save-button";
@@ -25,6 +26,7 @@ export default function Home() {
         <CancelButton/>
         <DeleteButton/>
         <EditButton/>
+        <FiltersButton/>
         <ForwardButton/>
         <SaveButton/>
         <SavePrintButton/>
