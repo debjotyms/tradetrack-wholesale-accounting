@@ -9,6 +9,7 @@ import { SaveButton } from "@/components/buttons/save-button";
 import SearchButton from "@/components/buttons/search-button";
 import UndoButton from "@/components/buttons/undo-button";
 import { AddCategoryPopupButton } from "@/components/popups/add-category-popup-button";
+import { AddMorePhoneNumbersPopupButton } from "@/components/popups/add-more-phone-numbers-popup-button";
 import { DeleteConfirmationPopupButton } from "@/components/popups/delete-confirmation-popup-button";
 import Image from "next/image";
 
@@ -43,6 +44,7 @@ export default function Home() {
       <div className="flex items-center flex-col space-y-2">
         <AddCategoryPopupButton/>
         <DeleteConfirmationPopupButton/>
+        <AddMorePhoneNumbersPopupButton/>
       </div>
     </>
   );

@@ -11,34 +11,29 @@ import {
 } from "@/components/ui/dialog"
 import CustomLabeledInput from "../others/custom-labeled-input"
 
-import { Ellipsis } from 'lucide-react';
-import { AddMorePhoneNumbersPopupTwoButton } from "./add-more-phone-numbers-popup-2-button"
+import { Plus } from 'lucide-react';
 
-export function AddMorePhoneNumbersPopupButton() {
+export function AddMorePhoneNumbersPopupTwoButton() {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant={"secondary"}>
-                    {/* Lucid 3 dot icon */}
-                    <Ellipsis /> Add More Phone Numbers
+                <Button variant={"secondary"} className="w-full">
+                    <Plus /> Add more phone numbers
                 </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                    <DialogTitle>Add More Phone Numbers</DialogTitle>
+                    <DialogTitle>Add a new phone number</DialogTitle>
                     <DialogDescription>
-                        To add a new phone number, plese click the Add more phone numbers button.
+                        Write down the Name and Phone number below and press the add button.
                     </DialogDescription>
                 </DialogHeader>
                 <div className="flex flex-col items-center">
                     <div className="w-full">
-                        <CustomLabeledInput label={"Main Phone"} labelBasis={"2/3"} inputBasis={"2/4"}/>
+                        <CustomLabeledInput label={"Name"} labelBasis={"2/3"} inputBasis={"2/4"}/>
                     </div>
                     <div className="w-full mt-4">
-                        <CustomLabeledInput label={"Brother's Phone"} labelBasis={"2/3"} inputBasis={"2/4"}/>
-                    </div>
-                    <div className="w-full mt-4">
-                        <AddMorePhoneNumbersPopupTwoButton/>
+                        <CustomLabeledInput label={"Phone Number"} labelBasis={"2/3"} inputBasis={"2/4"}/>
                     </div>
                 </div>
                 <DialogFooter className="sm:justify-start">
