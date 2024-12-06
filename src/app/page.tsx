@@ -3,6 +3,7 @@ import CancelButton from "@/components/buttons/cancel-button";
 import DeleteButton from "@/components/buttons/delete-button";
 import EditButton from "@/components/buttons/edit-button";
 import ForwardButton from "@/components/buttons/forward-button";
+import { SavePrintButton } from "@/components/buttons/save-and-print-button";
 import { SaveButton } from "@/components/buttons/save-button";
 import { AddCategoryPopupButton } from "@/components/popups/add-category-popup-button";
 import { DeleteConfirmationPopupButton } from "@/components/popups/delete-confirmation-popup-button";
@@ -24,6 +25,7 @@ export default function Home() {
         <EditButton/>
         <ForwardButton/>
         <SaveButton/>
+        <SavePrintButton/>
       </div>
       
       <div className='h-16 bg-black m-2 rounded-md mt-10'>
