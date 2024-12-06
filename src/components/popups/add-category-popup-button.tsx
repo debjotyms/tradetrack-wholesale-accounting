@@ -16,6 +16,7 @@ import { Label } from "@/components/ui/label"
 import AddButton from "../buttons/add-button"
 import PictureFrame from "../others/picture-frame"
 import CancelButton from "../buttons/cancel-button"
+import CustomLabeledInput from "../others/custom-labeled-input"
 
 export function AddCategoryPopupButton() {
   return (
@@ -32,16 +33,10 @@ export function AddCategoryPopupButton() {
         </DialogHeader>
         <div className="flex flex-col items-center">
             <PictureFrame/>
-            {/* <AddButton text="Upload Photo"/> */}
         </div>
         <div className="flex items-center space-x-2">
           <div className="grid flex-1 gap-2">
-            <Label htmlFor="link">
-              Category name
-            </Label>
-            <Input
-              id="link"
-            />
+            <CustomLabeledInput label={"Category Name"} labelBasis={"1/3"} inputBasis={"2/3"}/>
           </div>
         </div>
         <DialogFooter className="sm:justify-start">
