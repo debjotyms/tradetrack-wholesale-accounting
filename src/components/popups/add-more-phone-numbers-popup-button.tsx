@@ -12,7 +12,7 @@ import {
 import CustomLabeledInput from "../others/custom-labeled-input"
 
 import { Ellipsis } from 'lucide-react';
-import { AddMorePhoneNumbersPopupTwoButton } from "./add-more-phone-numbers-popup-2-button"
+import { AddMorePhoneNumbersPopupTwoButton } from "./add-more-phone-numbers-popup-two-button"
 
 export function AddMorePhoneNumbersPopupButton() {
     return (
