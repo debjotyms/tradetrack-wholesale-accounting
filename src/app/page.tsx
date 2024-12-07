@@ -4,48 +4,48 @@ import DeleteButton from "@/components/buttons/delete-button";
 import EditButton from "@/components/buttons/edit-button";
 import FiltersButton from "@/components/buttons/filters-button";
 import ForwardButton from "@/components/buttons/forward-button";
-import { SavePrintButton } from "@/components/buttons/save-and-print-button";
-import { SaveButton } from "@/components/buttons/save-button";
+import {SavePrintButton} from "@/components/buttons/save-and-print-button";
+import {SaveButton} from "@/components/buttons/save-button";
 import SearchButton from "@/components/buttons/search-button";
 import UndoButton from "@/components/buttons/undo-button";
-import { AddCategoryPopupButton } from "@/components/popups/add-category-popup-button";
-import { AddMorePhoneNumbersPopupButton } from "@/components/popups/add-more-phone-numbers-popup-button";
-import { DeleteConfirmationPopupButton } from "@/components/popups/delete-confirmation-popup-button";
+import {AddCategoryPopupButton} from "@/components/popups/add-category-popup-button";
+import {AddMorePhoneNumbersPopupButton} from "@/components/popups/add-more-phone-numbers-popup-button";
+import {DeleteConfirmationPopupButton} from "@/components/popups/delete-confirmation-popup-button";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-      <div className='h-16 bg-black m-2 rounded-md'>
-        <div className='h-16 flex justify-center items-center text-lg'>
-          <span className='text-white font-bold'>Buttons</span>
+    <div className="border-0 border-red-500 w-full h-full m-4">
+      <div className="h-16 bg-black rounded-md mb-2">
+        <div className="h-16 flex justify-center items-center text-lg">
+          <span className="text-white font-bold">Buttons</span>
         </div>
       </div>
 
       <div className="flex items-center flex-col space-y-2">
-        <AddButton text="Add me please!"/>
-        <CancelButton/>
-        <DeleteButton/>
-        <EditButton/>
-        <FiltersButton/>
-        <ForwardButton/>
-        <SaveButton/>
-        <SavePrintButton/>
-        <SearchButton/>
-        <UndoButton/>
+        <AddButton text="Add me please!" />
+        <CancelButton />
+        <DeleteButton />
+        <EditButton />
+        <FiltersButton />
+        <ForwardButton />
+        <SaveButton />
+        <SavePrintButton />
+        <SearchButton />
+        <UndoButton />
       </div>
-      
-      <div className='h-16 bg-black m-2 rounded-md mt-10'>
-        <div className='h-16 flex justify-center items-center text-lg'>
-          <span className='text-white font-bold'>Pop-ups</span>
+
+      <div className="h-16 bg-black rounded-md mt-10 mb-2">
+        <div className="h-16 flex justify-center items-center text-lg">
+          <span className="text-white font-bold">Pop-ups</span>
         </div>
-      </div>  
+      </div>
 
       <div className="flex items-center flex-col space-y-2">
-        <AddCategoryPopupButton/>
-        <DeleteConfirmationPopupButton/>
-        <AddMorePhoneNumbersPopupButton/>
+        <AddCategoryPopupButton />
+        <DeleteConfirmationPopupButton />
+        <AddMorePhoneNumbersPopupButton />
       </div>
-    </>
+    </div>
   );
 }
