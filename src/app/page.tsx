@@ -15,7 +15,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="border-0 border-red-500 w-full h-full m-4">
+    <div className="mx-4">
       <div className="h-16 bg-black rounded-md mb-2">
         <div className="h-16 flex justify-center items-center text-lg">
           <span className="text-white font-bold">Buttons</span>
