@@ -92,7 +92,7 @@ export function AppSidebar({...props}: React.ComponentProps<typeof Sidebar>) {
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
-        <div className="mb-3">
+        <div>
           <a href="/admin-profile">
             <NavUser user={data.user} />
           </a>
