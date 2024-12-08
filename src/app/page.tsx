@@ -8,6 +8,8 @@ import {SavePrintButton} from "@/components/buttons/save-and-print-button";
 import {SaveButton} from "@/components/buttons/save-button";
 import SearchButton from "@/components/buttons/search-button";
 import UndoButton from "@/components/buttons/undo-button";
+import BalanceCard from "@/components/others/balance-card";
+import DateDisplay from "@/components/others/date-display";
 import {AddCategoryPopupButton} from "@/components/popups/add-category-popup-button";
 import {AddMorePhoneNumbersPopupButton} from "@/components/popups/add-more-phone-numbers-popup-button";
 import { CancelInvoicePopupButton } from "@/components/popups/cancel-invoice-popup-button";
@@ -34,6 +36,8 @@ export default function Home() {
         <SavePrintButton />
         <SearchButton />
         <UndoButton />
+        <DateDisplay />
+        <BalanceCard title="Clients Balance" balance={0} credit={0} debit={0} />
       </div>
 
       <div className="h-16 bg-black rounded-md mt-10 mb-2">
