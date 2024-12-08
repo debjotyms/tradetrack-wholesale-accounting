@@ -10,6 +10,7 @@ import SearchButton from "@/components/buttons/search-button";
 import UndoButton from "@/components/buttons/undo-button";
 import {AddCategoryPopupButton} from "@/components/popups/add-category-popup-button";
 import {AddMorePhoneNumbersPopupButton} from "@/components/popups/add-more-phone-numbers-popup-button";
+import { CancelInvoicePopupButton } from "@/components/popups/cancel-invoice-popup-button";
 import {DeleteConfirmationPopupButton} from "@/components/popups/delete-confirmation-popup-button";
 import Image from "next/image";
 
@@ -45,6 +46,7 @@ export default function Home() {
         <AddCategoryPopupButton />
         <DeleteConfirmationPopupButton />
         <AddMorePhoneNumbersPopupButton />
+        <CancelInvoicePopupButton />
       </div>
     </div>
   );
