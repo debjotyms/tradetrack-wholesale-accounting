@@ -9,11 +9,11 @@ interface CustomLabeledInputProps {
 
 const CustomLabeledInput: React.FC<CustomLabeledInputProps> = ({ label = "Default Label"}) => {
     return (
-        <div className='flex flex-row h-10 mx-0 rounded-lg'>
+        <div className='flex border-[1px] border-grey-200 flex-row h-10 mx-0 rounded-lg'>
             <div className={`basis-[40%] bg-secondary rounded-s-md flex pl-3 items-center text-sm`}>
                 {label}
             </div>
-            <Input className={`h-10 rounded-s-none rounded-e-lg basis-[60%]`} />
+            <Input className={`h-10 shadow-white rounded-s-none border-0 rounded-e-lg basis-[60%]`} />
         </div>
     );
 };
