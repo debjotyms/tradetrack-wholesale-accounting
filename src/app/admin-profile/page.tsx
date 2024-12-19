@@ -1,5 +1,5 @@
 import CustomLabeledInput from "@/components/others/custom-labeled-input";
-import PictureFrame from "@/components/others/picture-frame";
+// import PictureFrame from "@/components/others/picture-frame";
 import PictureFrameAdmin from "@/components/others/picture-frame-admin";
 import React from "react";
 
