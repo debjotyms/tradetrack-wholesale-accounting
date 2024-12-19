@@ -14,7 +14,7 @@ import {AddCategoryPopupButton} from "@/components/popups/add-category-popup-but
 import {AddMorePhoneNumbersPopupButton} from "@/components/popups/add-more-phone-numbers-popup-button";
 import { CancelInvoicePopupButton } from "@/components/popups/cancel-invoice-popup-button";
 import {DeleteConfirmationPopupButton} from "@/components/popups/delete-confirmation-popup-button";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Home() {
   return (

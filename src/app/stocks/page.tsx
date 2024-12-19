@@ -1,13 +1,21 @@
-import React from 'react';
+"use client";
+
+import React from "react";
+import {StockDataTable} from "./stock-data-table";
+import {stockColumns} from "./stock-columns";
+import stockData from "@/data/stocks.json";
 
 const StocksPage = () => {
-    return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-            <div className="p-8 bg-white rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-gray-50 font-mono">
-                Hello, I am Stocks Page.
-            </div>
+  const data = stockData;
+  return (
+    <div className="px-4">
+      <div className="border-2 border-secondary h-full w-full rounded-xl grid grid-cols-1 gap-3">
+        <div className="h-full w-full rounded-xl p-3 py-0 overflow-x-auto">
+          <StockDataTable columns={stockColumns} data={data} />
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default StocksPage;

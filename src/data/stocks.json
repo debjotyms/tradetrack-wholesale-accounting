@@ -1,0 +1,26 @@
+[
+  {
+    "productId": "P123",
+    "company": "Company A",
+    "companyLogo": "/logos/company-a.png",
+    "category": "Electronics",
+    "modelNo": "Model X",
+    "stockAvailable": 50
+  },
+  {
+    "productId": "P456",
+    "company": "Company B",
+    "companyLogo": "/logos/company-b.png",
+    "category": "Appliances",
+    "modelNo": "Model Y",
+    "stockAvailable": 30
+  },
+  {
+    "productId": "P789",
+    "company": "Company C",
+    "companyLogo": "@/app/image.png",
+    "category": "Furniture",
+    "modelNo": "Model Z",
+    "stockAvailable": 15
+  }
+]

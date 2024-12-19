@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Rahim Uddin",
+    "district": "Dhaka",
+    "subDistrict": "Gulshan",
+    "role": "Employee",
+    "phoneNo": "01711-123456",
+    "access": ""
+  },
+  {
+    "name": "Fatema Begum",
+    "district": "Chittagong",
+    "subDistrict": "Pahartali",
+    "role": "Employee",
+    "phoneNo": "01812-654321",
+    "access": ""
+},
+{
+  "name": "Karim Ahmed",
+  "district": "Sylhet",
+  "subDistrict": "Zindabazar",
+  "role": "Admin",
+  "phoneNo": "01913-789012",
+  "access": ""
+},
+{
+  "name": "Ayesha Siddiqua",
+  "district": "Rajshahi",
+  "subDistrict": "Shaheb Bazar",
+  "role": "Employee",
+  "phoneNo": "01614-345678",
+  "access": ""
+}
+]
