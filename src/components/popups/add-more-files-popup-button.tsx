@@ -19,7 +19,7 @@ export function AddMoreFilesPopUpButton() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant={"secondary"}  className="bg-blue-500 text-white w-full">
+        <Button className="bg-blue-500 text-white w-full">
           <Plus /> Add file
         </Button>
       </DialogTrigger>

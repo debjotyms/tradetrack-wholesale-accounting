@@ -80,12 +80,15 @@ export function MainNav() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </div>
-      <div className="p-3 bg-secondary rounded-lg">
+      <div className="px-3 py-2 bg-secondary rounded-lg">
         <NavigationMenuList className="gap-6 flex items-center">
           <NavigationMenuItem>
-            <NavigationMenuLink href="/admin-profile" className="flex items-center font-semibold text-gray-700">
+            <NavigationMenuLink href="/admin-profile" className="flex items-center text-gray-700">
               <img src="/images/akib.png" alt="Profile" className="w-8 h-8 rounded-full mr-2 border-2 border-white" />
-              Akib Azmain
+              <div className="flex flex-col">
+                <span className="font-semibold">Aquib Azmain</span>
+                <span className="text-sm">Administrator</span>
+              </div>
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
