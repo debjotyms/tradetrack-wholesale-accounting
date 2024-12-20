@@ -21,17 +21,16 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
 import {Input} from "@/components/ui/input";
-// import AddButton from "@/components/buttons/add-button";
-import {AddMoreProductsPopupButton} from "@/components/popups/add-more-products-popup-button";
+import {AddMoreFilesPopUpButton} from "@/components/popups/add-more-files-popup-button";
+import AddButton from "@/components/buttons/add-button";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
 }
 
-export function StockDataTable<TData, TValue>({columns, data}: DataTableProps<TData, TValue>) {
+export function FileDataTable<TData, TValue>({columns, data}: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
@@ -61,14 +60,17 @@ export function StockDataTable<TData, TValue>({columns, data}: DataTableProps<TD
         {/* Input for filtering */}
         <div className="flex items-center py-3">
           <Input
-            placeholder="Filter company..."
-            value={(table.getColumn("company")?.getFilterValue() as string) ?? ""}
-            onChange={(event) => table.getColumn("company")?.setFilterValue(event.target.value)}
+            placeholder="Filter files..."
+            value={(table.getColumn("fileName")?.getFilterValue() as string) ?? ""}
+            onChange={(event) => table.getColumn("fileName")?.setFilterValue(event.target.value)}
             className="max-w-sm"
           />
         </div>
         <div className="ml-auto flex items-center">
-          <AddMoreProductsPopupButton></AddMoreProductsPopupButton>
+          <div className="mx-2">
+            <AddMoreFilesPopUpButton />
+          </div>
+
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="ml-auto">

@@ -15,6 +15,8 @@ import { Button } from "@/components/ui/button";
 // } from "@/components/ui/dropdown-menu";
 // import DeleteButton from "@/components/buttons/delete-button";
 import { DeleteConfirmationPopupButton } from "@/components/popups/delete-confirmation-popup-button";
+import AddButton from "@/components/buttons/add-button";
+import { AddStockPopUpButton } from "@/components/popups/add-stock-popup-button";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -91,6 +93,13 @@ export const stockColumns: ColumnDef<StockProduct>[] = [
         <ArrowUpDown className="ml-2 h-4 w-4" />
       </Button>
     ),
+  },
+  {
+    id: "add",
+    cell: ({ row }) => {
+      const product = row.original;
+      return <AddStockPopUpButton/>;
+    },
   },
   {
     id: "delete",
