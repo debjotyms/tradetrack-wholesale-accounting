@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import CustomLabeledInput from "@/components/others/custom-labeled-input";
 import CustomLabeledInputBig from "@/components/others/custom-labeled-input-big";
 // import PictureFrame from "@/components/others/picture-frame";
@@ -12,47 +12,56 @@ import fileData from "@/data/files.json";
 import {Button} from "@/components/ui/button";
 import {LucideSave, LucideX} from "lucide-react";
 import {Undo} from "lucide-react";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import {useEffect, useState} from "react";
 
 const AdminProfilePage = () => {
   const data = fileData;
-  // const userData = {
-  //   name: "Aquib Azmain",
-  //   phone_num: "01684000111",
-  //   email: "user100@domain.com",
-  //   role: "Administrator",
-  //   district: "Jhenaidah",
-  //   subdistrict: "Jhenaidah Sadar",
-  //   additional_phone_nums: {
-  //     Brother: "01685060099",
-  //     Father: "01798889966",
-  //   },
-  // };
+  const userData = {
+    name: "Bill Gates",
+    email: "user1@domain.com",
+    district: "Jhenaidah",
+    subdistrict: "Jhenaidah Sadar",
+    address: "Kocatolar mor, Adarshopara",
+    role: "Admin",
+    phone_num: "01785060088",
+    additional_phone_nums: {
+      Brother: "01685060099",
+      Father: "01798889966",
+    },
+  };
 
-  const [userData, setUserData] = useState(null);
+  // const [userData, setUserData] = useState(null);
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await axios.post("http://localhost:6969/user/userinfo", {
-          phone_num: "01684000111",
-          email: "user100@domain.com",
-        });
-        setUserData(response.data);
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-        // Optionally set an error state to display an error message to the user
-      }
-    };
-  
-    fetchUserData();
-  }, []);
-  
-  console.log(userData);
-  if (!userData) {
-    return <div>Loading hoitese...</div>;
-  }
+  // useEffect(() => {
+  //   const fetchUserData = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:6969/user/userinfo", {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify({
+  //           phone_num: "01684000111",
+  //           email: "user100@domain.com",
+  //         }),
+  //       });
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok " + response.statusText);
+  //       }
+  //       o
+  //       const data = await response.json();
+  //       setUserData(data);
+  //     } catch (error) {
+  //       console.log("Error fetching user data:", error);
+  //       // Optionally set an error state to display an error message to the user
+  //     }
+  //   };
+
+  //   fetchUserData();
+  // }, []);
+
+  // console.log(userData);
+  // if (!userData) {
+  //   return <div>Loading hoitese...</div>;
+  // }
 
   return (
     <div>
@@ -169,7 +178,7 @@ const AdminProfilePage = () => {
                     label={"Address"}
                     labelBasis={""}
                     inputBasis={""}
-                    value={""}></CustomLabeledInputBig>
+                    value={userData.address}></CustomLabeledInputBig>
                 </div>
               </div>
             </div>

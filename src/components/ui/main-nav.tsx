@@ -44,12 +44,12 @@ export function MainNav() {
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <NavigationMenuLink href="/dashboard" className="flex items-center">
               <LayoutDashboard className="w-4 h-4 mr-2" />
               Dashboard
             </NavigationMenuLink>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
 
           <NavigationMenuItem>
             <NavigationMenuLink href="/clients" className="flex items-center">
@@ -58,12 +58,12 @@ export function MainNav() {
             </NavigationMenuLink>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
+          {/* <NavigationMenuItem>
             <NavigationMenuLink href="/suppliers" className="flex items-center">
               <ShoppingCart className="w-4 h-4 mr-2" />
               Suppliers
             </NavigationMenuLink>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
 
           <NavigationMenuItem>
             <NavigationMenuLink href="/admin-panel" className="flex items-center">
