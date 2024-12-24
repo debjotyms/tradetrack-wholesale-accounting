@@ -24,7 +24,7 @@ const AdminProfilePage = () => {
           {/* Name and Badge */}
           <div className="flex items-center gap-2 mb-2">
             <div className="flex flex-col">
-              <h2 className="text-base font-semibold">Aquib Azmain</h2>
+              <h2 className="text-base font-semibold">Bracu Chicken</h2>
               <span className=" py-1 text-xs text-white bg-teal-600 rounded-full inline-block text-center w-auto">
                 Administrator
               </span>
@@ -39,12 +39,12 @@ const AdminProfilePage = () => {
                 <div>
                   <span className="text-gray-600 font-semibold">Email: </span>
                   <a href="mailto:example@gmail.com" className="text-blue-600 hover:underline">
-                    example@gmail.com
+                    chicken@g.bracu.ac.bd
                   </a>
                 </div>
                 <div>
                   <span className="text-gray-600 font-semibold">Phone: </span>
-                  <span>+880 1722-222 222</span>
+                  <span>+880 0000-000 000</span>
                 </div>
               </div>
             </div>
