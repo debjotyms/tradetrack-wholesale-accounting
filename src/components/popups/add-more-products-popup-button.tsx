@@ -16,7 +16,7 @@ export function AddMoreProductsPopupButton() {
     <div className="mx-2">
       <Dialog>
         <DialogTrigger asChild>
-          <Button className="h-9 w-full bg-blue-500">
+          <Button className="h-9 w-full">
             {/* Lucid 3 dot icon */}
             + Add Products
           </Button>

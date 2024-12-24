@@ -1,21 +1,33 @@
 "use client";
 
 import {ColumnDef} from "@tanstack/react-table";
-import {ArrowUpDown, Download, Edit, MoveRight, Trash2} from "lucide-react";
+import {ArrowUpDown, Edit, Link, MoveRight, Trash2} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Button} from "@/components/ui/button";
+// import { MoreHorizontal } from "lucide-react";
+// import {
+//   DropdownMenu,
+//   DropdownMenuContent,
+//   DropdownMenuItem,
+//   DropdownMenuLabel,
+//   DropdownMenuSeparator,
+//   DropdownMenuTrigger,
+// } from "@/components/ui/dropdown-menu";
+// import DeleteButton from "@/components/buttons/delete-button";
 import {DeleteConfirmationPopupButton} from "@/components/popups/delete-confirmation-popup-button";
 import AddButton from "@/components/buttons/add-button";
 import {AddStockPopUpButton} from "@/components/popups/add-stock-popup-button";
-import Link from "next/link";
+import {Arrow} from "@radix-ui/react-dropdown-menu";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 export type StockProduct = {
-  categoryName: string;
+  bankName: string;
+  hotline: string;
+  website: string;
 };
 
-export const suppliersColumns: ColumnDef<StockProduct>[] = [
+export const stockColumns: ColumnDef<StockProduct>[] = [
   {
     id: "select",
     header: ({table}) => (
@@ -36,10 +48,28 @@ export const suppliersColumns: ColumnDef<StockProduct>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "categoryName",
+    accessorKey: "bankName",
     header: ({column}) => (
       <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
-        Stakeholders Category
+        Bank Name
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+  },
+  {
+    accessorKey: "hotline",
+    header: ({column}) => (
+      <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+        Hotline
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+  },
+  {
+    accessorKey: "website",
+    header: ({column}) => (
+      <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+        Website
         <ArrowUpDown className="ml-2 h-4 w-4" />
       </Button>
     ),
@@ -49,27 +79,9 @@ export const suppliersColumns: ColumnDef<StockProduct>[] = [
     cell: ({row}) => {
       const file = row.original;
       return (
-        <div className="flex justify-center space-x-2">
-          <Button variant="ghost" size="sm">
-            <Edit className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={async () => {
-              await fetch(`/api/stakeholders-category?categoryName=${encodeURIComponent(file.categoryName)}`, {
-                method: "DELETE",
-              });
-              // Optionally trigger a refresh or re-fetch here
-            }}>
-            <Trash2 className="h-4 w-4" />
-          </Button>
-          <Button variant="ghost" size="sm" asChild>
-            <Link href={`/suppliers/suppliers-subpage`}>
-              <MoveRight className="h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
+        <Button variant={"ghost"} className="">
+          <MoveRight />
+        </Button>
       );
     },
   },

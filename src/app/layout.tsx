@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "./globals.css";
 import {AppSidebar} from "@/components/others/app-sidebar";
@@ -11,12 +12,16 @@ import {
 } from "@/components/ui/breadcrumb";
 import {Separator} from "@/components/ui/separator";
 import {SidebarInset, SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+import { usePathname } from "next/navigation";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({children}) => {
+  const pathname = usePathname();
+  const segments = (pathname ?? "").split("/").filter(Boolean);
+
   return (
     <html lang="en">
       <head>
@@ -34,13 +39,14 @@ const Layout: React.FC<LayoutProps> = ({children}) => {
                   <Separator orientation="vertical" className="mr-2 h-4" />
                   <Breadcrumb>
                     <BreadcrumbList>
-                      <BreadcrumbItem className="hidden md:block">
-                        <BreadcrumbLink href="#">TradeTrack</BreadcrumbLink>
-                      </BreadcrumbItem>
-                      <BreadcrumbSeparator className="hidden md:block" />
-                      <BreadcrumbItem>
-                        <BreadcrumbPage>Components</BreadcrumbPage>
-                      </BreadcrumbItem>
+                      {segments.map((segment, index) => {
+                        const href = "/" + segments.slice(0, index + 1).join("/");
+                        return (
+                          <BreadcrumbItem key={segment}>
+                            <BreadcrumbLink href={href}>{segment}</BreadcrumbLink>
+                          </BreadcrumbItem>
+                        );
+                      })}
                     </BreadcrumbList>
                   </Breadcrumb>
                 </div>

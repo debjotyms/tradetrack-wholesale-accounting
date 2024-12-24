@@ -22,9 +22,9 @@ import {Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail} from
 // This is sample data.
 const data = {
   user: {
-    name: "Debjoty Mitra",
-    email: "debjotyms@gmail.com",
-    avatar: "https://gravatar.com/userimage/216772507/6261d07fc6f9e58147fb136a3a801178.jpeg",
+    name: "Bracu Chicken",
+    email: "chicken@g.bracu.ac.bd",
+    avatar: "https://img.freepik.com/free-vector/head-chicken-cartoon-style_1308-92600.jpg?t=st=1734998202~exp=1735001802~hmac=f16e878725e9aae5a542f3fbb1eba7a7b682c3146dd6484f0a9af4c6166941d5&w=826",
   },
   teams: [
     {
@@ -44,26 +44,26 @@ const data = {
       url: "/dashboard",
       icon: LayoutDashboard,
     },
-    {
-      name: "Clients",
-      url: "/clients",
-      icon: Smile,
-    },
-    {
-      name: "Stakeholders",
-      url: "/stakeholders",
-      icon: Archive,
-    },
+    // {
+    //   name: "Clients",
+    //   url: "/clients",
+    //   icon: Smile,
+    // },
+    // {
+    //   name: "Stakeholders",
+    //   url: "/stakeholders",
+    //   icon: Archive,
+    // },
     {
       name: "Suppliers",
       url: "/suppliers",
       icon: BaggageClaim,
     },
-    {
-      name: "Stocks",
-      url: "/stocks",
-      icon: PackageOpen,
-    },
+    // {
+    //   name: "Stocks",
+    //   url: "/stocks",
+    //   icon: PackageOpen,
+    // },
     {
       name: "Banks",
       url: "/banks",
@@ -74,11 +74,11 @@ const data = {
       url: "/statements",
       icon: Table,
     },
-    {
-      name: "Admin Panel",
-      url: "/admin-panel",
-      icon: UserCog,
-    },
+    // {
+    //   name: "Admin Panel",
+    //   url: "/admin-panel",
+    //   icon: UserCog,
+    // },
   ],
 };
 

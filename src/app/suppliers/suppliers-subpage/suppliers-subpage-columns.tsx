@@ -12,7 +12,11 @@ import Link from "next/link";
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 export type StockProduct = {
-  categoryName: string;
+  stakeholdersName: string;
+  productId: string;
+  productCategory: string;
+  mobileNumber: string;
+  stockAvailable: number;
 };
 
 export const suppliersColumns: ColumnDef<StockProduct>[] = [
@@ -36,10 +40,46 @@ export const suppliersColumns: ColumnDef<StockProduct>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "categoryName",
+    accessorKey: "stakeholdersName",
     header: ({column}) => (
       <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
-        Stakeholders Category
+        Stakeholders Name
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+  },
+  {
+    accessorKey: "productId",
+    header: ({column}) => (
+      <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+        Product ID
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+  },
+  {
+    accessorKey: "productCategory",
+    header: ({column}) => (
+      <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+        Product Category
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+  },
+  {
+    accessorKey: "mobileNumber",
+    header: ({column}) => (
+      <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+        Mobile Number
+        <ArrowUpDown className="ml-2 h-4 w-4" />
+      </Button>
+    ),
+  },
+  {
+    accessorKey: "stockAvailable",
+    header: ({column}) => (
+      <Button variant="ghost" onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}>
+        Stock Available
         <ArrowUpDown className="ml-2 h-4 w-4" />
       </Button>
     ),
@@ -53,15 +93,7 @@ export const suppliersColumns: ColumnDef<StockProduct>[] = [
           <Button variant="ghost" size="sm">
             <Edit className="h-4 w-4" />
           </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={async () => {
-              await fetch(`/api/stakeholders-category?categoryName=${encodeURIComponent(file.categoryName)}`, {
-                method: "DELETE",
-              });
-              // Optionally trigger a refresh or re-fetch here
-            }}>
+          <Button>
             <Trash2 className="h-4 w-4" />
           </Button>
           <Button variant="ghost" size="sm" asChild>

@@ -1,0 +1,107 @@
+[
+  {
+    "stakeholdersName": "Shah Cement Industries Ltd",
+    "productId": "C001",
+    "productCategory": "Cement",
+    "mobileNumber": "01711234567",
+    "stockAvailable": 5000
+  },
+  {
+    "stakeholdersName": "Bashundhara Cement",
+    "productId": "C002",
+    "productCategory": "Cement",
+    "mobileNumber": "01819876543",
+    "stockAvailable": 4800
+  },
+  {
+    "stakeholdersName": "Crown Cement",
+    "productId": "C003",
+    "productCategory": "Cement",
+    "mobileNumber": "01912345678",
+    "stockAvailable": 3500
+  },
+  {
+    "stakeholdersName": "Holcim Bangladesh",
+    "productId": "C004",
+    "productCategory": "Cement",
+    "mobileNumber": "01755667788",
+    "stockAvailable": 6000
+  },
+  {
+    "stakeholdersName": "Premier Cement",
+    "productId": "C005",
+    "productCategory": "Cement",
+    "mobileNumber": "01611223344",
+    "stockAvailable": 4200
+  },
+  {
+    "stakeholdersName": "Fresh Cement",
+    "productId": "C006",
+    "productCategory": "Cement",
+    "mobileNumber": "01511334455",
+    "stockAvailable": 3800
+  },
+  {
+    "stakeholdersName": "Seven Rings Cement",
+    "productId": "C007",
+    "productCategory": "Cement",
+    "mobileNumber": "01911445566",
+    "stockAvailable": 4500
+  },
+  {
+    "stakeholdersName": "Mir Cement",
+    "productId": "C008",
+    "productCategory": "Cement",
+    "mobileNumber": "01811556677",
+    "stockAvailable": 3200
+  },
+  {
+    "stakeholdersName": "Ruby Cement",
+    "productId": "C009",
+    "productCategory": "Cement",
+    "mobileNumber": "01711667788",
+    "stockAvailable": 2800
+  },
+  {
+    "stakeholdersName": "King Brand Cement",
+    "productId": "C010",
+    "productCategory": "Cement",
+    "mobileNumber": "01611778899",
+    "stockAvailable": 3600
+  },
+  {
+    "stakeholdersName": "Tiger Cement",
+    "productId": "C011",
+    "productCategory": "Cement",
+    "mobileNumber": "01515889900",
+    "stockAvailable": 4100
+  },
+  {
+    "stakeholdersName": "Confidence Cement",
+    "productId": "C012",
+    "productCategory": "Cement",
+    "mobileNumber": "01717990011",
+    "stockAvailable": 3900
+  },
+  {
+    "stakeholdersName": "Heidelberg Cement Bangladesh",
+    "productId": "C013",
+    "productCategory": "Cement",
+    "mobileNumber": "01819001122",
+    "stockAvailable": 5500
+  },
+  {
+    "stakeholdersName": "Lafarge Holcim Bangladesh",
+    "productId": "C014",
+    "productCategory": "Cement",
+    "mobileNumber": "01911112233",
+    "stockAvailable": 5800
+  },
+  {
+    "stakeholdersName": "Meghna Cement",
+    "productId": "C015",
+    "productCategory": "Cement",
+    "mobileNumber": "01711223344",
+    "stockAvailable": 4300
+  }
+]

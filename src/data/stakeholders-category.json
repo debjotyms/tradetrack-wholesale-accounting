@@ -12,12 +12,24 @@
     "categoryName": "Rice"
   },
   {
-    "categoryName": "Farm"
+    "categoryName": "Timber"
   },
   {
-    "categoryName": "Pond"
+    "categoryName": "Electronics"
   },
   {
-    "categoryName": "Rental"
+    "categoryName": "Textiles"
+  },
+  {
+    "categoryName": "Plastics"
+  },
+  {
+    "categoryName": "Paper"
+  },
+  {
+    "categoryName": "Chemicals"
+  },
+  {
+    "categoryName": "Automotive Parts"
   }
 ]
