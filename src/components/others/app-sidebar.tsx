@@ -44,26 +44,26 @@ const data = {
       url: "/dashboard",
       icon: LayoutDashboard,
     },
-    // {
-    //   name: "Clients",
-    //   url: "/clients",
-    //   icon: Smile,
-    // },
-    // {
-    //   name: "Stakeholders",
-    //   url: "/stakeholders",
-    //   icon: Archive,
-    // },
+    {
+      name: "Clients",
+      url: "/clients",
+      icon: Smile,
+    },
+    {
+      name: "Stakeholders",
+      url: "/stakeholders",
+      icon: Archive,
+    },
     {
       name: "Suppliers",
       url: "/suppliers",
       icon: BaggageClaim,
     },
-    // {
-    //   name: "Stocks",
-    //   url: "/stocks",
-    //   icon: PackageOpen,
-    // },
+    {
+      name: "Stocks",
+      url: "/stocks",
+      icon: PackageOpen,
+    },
     {
       name: "Banks",
       url: "/banks",
@@ -74,11 +74,11 @@ const data = {
       url: "/statements",
       icon: Table,
     },
-    // {
-    //   name: "Admin Panel",
-    //   url: "/admin-panel",
-    //   icon: UserCog,
-    // },
+    {
+      name: "Admin Panel",
+      url: "/admin-panel",
+      icon: UserCog,
+    },
   ],
 };
 

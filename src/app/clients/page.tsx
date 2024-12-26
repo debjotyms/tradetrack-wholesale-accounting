@@ -25,8 +25,37 @@ async function getClientData(): Promise<ClientData[]> {
 export default async function ClientPage() {
   const data = await getData();
   const clientData = await getClientData();
-  const dataB = {
-    districts: ["Jhenaidah", "Dhaka", "Khulna", "Magura"],
+  const userData = {
+    name: "Bill Gates",
+    email: "user1@domain.com",
+    district: "Jhenaidah",
+    subdistrict: "Jhenaidah Sadar",
+    address: "Kocatolar mor, Adarshopara",
+    role: "Admin",
+    phone_num: "01785060088",
+    additional_phone_nums: {
+      Brother: "01685060099",
+      Father: "01798889966",
+    },
+  };
+
+  const productData = {
+    productId: "12345",
+    company: "Akij Cement",
+    category: "Cement",
+    modelNo: "TC-1000",
+    quantity: "50",
+    unitPrice: "299.99",
+  };
+
+  const totalCostsData = {
+    subtotal: "1000.00",
+    discount: "50.00",
+    vat: "150.00",
+    grandTotal: "1100.00",
+    previousDue: "200.00",
+    paid: "900.00",
+    totalDue: "400.00",
   };
 
   return (
@@ -39,27 +68,36 @@ export default async function ClientPage() {
         </TabsList>
         <TabsContent value="new-invoice">
           <div className="border-2 border-secondary h-full w-full rounded-xl p-3 grid grid-cols-1 md:grid-cols-3 gap-2">
-            <div className="text-[#6B7280] text-sm">Clients information</div> {/* 1 1 */}
-            <div className="text-[#6B7280] text-sm">Products</div> {/* 2 1 */}
-            <div className="text-[#6B7280] text-sm">Total Costs</div> {/* 3 1 */}
-            <CustomLabeledInput label={"Name"} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 1 2 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 2 2 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 3 2 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 1 3 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 2 3 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 3 3 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 1 4 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 2 4 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 3 4 */}
-            <CustomLabeledInput label={"Address"} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 1 5 */}
-            <CustomLabeledInput label={"Quantity"} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 2 5 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 3 5 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 1 6 */}
-            <CustomLabeledInput label={"Unit Price"} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 2 6 */}
-            <CustomLabeledInput label={"Paid"} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 3 6 */}
-            <AddMorePhoneNumbersPopupButton /> {/* 1 7 */}
-            <AddButton text={"Add Product"} className="w-full bg-blue-600 h-10" /> {/* 2 7 */}
-            <CustomLabeledInput label={""} labelBasis={""} inputBasis={""}></CustomLabeledInput> {/* 3 7 */}
+            <div className="flex flex-col gap-2">
+              <div className="text-[#6B7280] text-sm">Clients information</div> {/* 1 1 */}
+              <CustomLabeledInput label={"Phone no"} labelBasis={""} inputBasis={""} value={userData.phone_num}></CustomLabeledInput> {/* 1 2 */}
+              <CustomLabeledInput label={"Name"} labelBasis={""} inputBasis={""} value={userData.name}></CustomLabeledInput> {/* 2 2 */}
+              <CustomLabeledInput label={"District"} labelBasis={""} inputBasis={""} value={userData.district}></CustomLabeledInput> {/* 3 2 */}
+              <CustomLabeledInput label={"Sub-district"} labelBasis={""} inputBasis={""} value={userData.subdistrict}></CustomLabeledInput>{" "}
+              <CustomLabeledInput label={"Address"} labelBasis={""} inputBasis={""} value={userData.address}></CustomLabeledInput> {/* 2 3 */}
+              <CustomLabeledInput label={"Invoice ID"} labelBasis={""} inputBasis={""} value="231"></CustomLabeledInput> {/* 3 3 */}
+              <AddMorePhoneNumbersPopupButton /> {/* 1 7 */}
+            </div>
+            <div className="flex flex-col gap-2">
+              <div className="text-[#6B7280] text-sm">Products</div> {/* 2 1 */}
+              <CustomLabeledInput label={"Product ID"} labelBasis={""} inputBasis={""} value={productData.productId}></CustomLabeledInput> {/* 1 4 */}
+              <CustomLabeledInput label={"Company"} labelBasis={""} inputBasis={""} value={productData.company}></CustomLabeledInput> {/* 2 4 */}
+              <CustomLabeledInput label={"Category"} labelBasis={""} inputBasis={""} value={productData.category}></CustomLabeledInput> {/* 3 4 */}
+              <CustomLabeledInput label={"Model No"} labelBasis={""} inputBasis={""} value={productData.modelNo}></CustomLabeledInput> {/* 1 5 */}
+              <CustomLabeledInput label={"Quantity"} labelBasis={""} inputBasis={""} value={productData.quantity}></CustomLabeledInput> {/* 2 5 */}
+              <CustomLabeledInput label={"Unit Price"} labelBasis={""} inputBasis={""} value={productData.unitPrice}></CustomLabeledInput> {/* 3 5 */}
+              <AddButton text={"Add Product"} className="w-full bg-blue-600 h-10" /> {/* 2 7 */}
+            </div>
+            <div className="flex flex-col gap-2">
+              <div className="text-[#6B7280] text-sm">Total Costs</div>
+              <CustomLabeledInput label={"Subtotal"} labelBasis={""} inputBasis={""} value={totalCostsData.subtotal}></CustomLabeledInput>
+              <CustomLabeledInput label={"Discount"} labelBasis={""} inputBasis={""} value={totalCostsData.discount}></CustomLabeledInput>
+              <CustomLabeledInput label={"Vat"} labelBasis={""} inputBasis={""} value={totalCostsData.vat}></CustomLabeledInput>
+              <CustomLabeledInput label={"Grand Total"} labelBasis={""} inputBasis={""} value={totalCostsData.grandTotal}></CustomLabeledInput>
+              <CustomLabeledInput label={"Previous Due"} labelBasis={""} inputBasis={""} value={totalCostsData.previousDue}></CustomLabeledInput>
+              <CustomLabeledInput label={"Paid"} labelBasis={""} inputBasis={""} value={totalCostsData.paid}></CustomLabeledInput>
+              <CustomLabeledInput label={"Total Due"} labelBasis={""} inputBasis={""} value={totalCostsData.totalDue}></CustomLabeledInput>
+            </div>
           </div>
           <div className="border-2 border-secondary h-full w-full rounded-xl mt-2 grid grid-cols-1 gap-3">
             <div className="h-full w-full rounded-xl p-3 py-0">

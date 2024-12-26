@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import "./globals.css";
-import {AppSidebar} from "@/components/others/app-sidebar";
+import { MainNav } from "@/components/ui/main-nav";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -13,6 +13,7 @@ import {
 import {Separator} from "@/components/ui/separator";
 import {SidebarInset, SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import { usePathname } from "next/navigation";
+import { AppSidebar } from "@/components/others/app-sidebar";
 
 interface LayoutProps {
   children: React.ReactNode;

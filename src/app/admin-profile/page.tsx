@@ -1,16 +1,68 @@
+"use client";
 import CustomLabeledInput from "@/components/others/custom-labeled-input";
 import CustomLabeledInputBig from "@/components/others/custom-labeled-input-big";
-// import PictureFrame from "@/components/others/picture-frame";
+import PictureFrame from "@/components/others/picture-frame";
 import PictureFrameAdmin from "@/components/others/picture-frame-admin";
 import {AddMorePhoneNumbersPopupTwoButton} from "@/components/popups/add-more-phone-numbers-popup-two-button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import React from "react";
-import { FileDataTable } from "@/app/admin-profile/file-data-table";
-import { fileColumns } from "@/app/admin-profile/file-columns";
+import {FileDataTable} from "@/app/admin-profile/file-data-table";
+import {fileColumns} from "@/app/admin-profile/file-columns";
 import fileData from "@/data/files.json";
+import {Button} from "@/components/ui/button";
+import {LucideSave, LucideX} from "lucide-react";
+import {Undo} from "lucide-react";
+import {useEffect, useState} from "react";
 
 const AdminProfilePage = () => {
   const data = fileData;
+  const userData = {
+    name: "Bill Gates",
+    email: "user1@domain.com",
+    district: "Jhenaidah",
+    subdistrict: "Jhenaidah Sadar",
+    address: "Kocatolar mor, Adarshopara",
+    role: "Admin",
+    phone_num: "01785060088",
+    additional_phone_nums: {
+      Brother: "01685060099",
+      Father: "01798889966",
+    },
+  };
+
+  // const [userData, setUserData] = useState(null);
+
+  // useEffect(() => {
+  //   const fetchUserData = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:6969/user/userinfo", {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify({
+  //           phone_num: "01684000111",
+  //           email: "user100@domain.com",
+  //         }),
+  //       });
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok " + response.statusText);
+  //       }
+  //       o
+  //       const data = await response.json();
+  //       setUserData(data);
+  //     } catch (error) {
+  //       console.log("Error fetching user data:", error);
+  //       // Optionally set an error state to display an error message to the user
+  //     }
+  //   };
+
+  //   fetchUserData();
+  // }, []);
+
+  // console.log(userData);
+  // if (!userData) {
+  //   return <div>Loading hoitese...</div>;
+  // }
+
   return (
     <div>
       <div className="flex items-start gap-4 bg-secondary p-3 rounded-lg mx-4">
@@ -24,9 +76,9 @@ const AdminProfilePage = () => {
           {/* Name and Badge */}
           <div className="flex items-center gap-2 mb-2">
             <div className="flex flex-col">
-              <h2 className="text-base font-semibold">Bracu Chicken</h2>
+              <h2 className="text-base font-semibold">{userData.name}</h2>
               <span className=" py-1 text-xs text-white bg-teal-600 rounded-full inline-block text-center w-auto">
-                Administrator
+                {userData.role}
               </span>
             </div>
           </div>
@@ -39,12 +91,12 @@ const AdminProfilePage = () => {
                 <div>
                   <span className="text-gray-600 font-semibold">Email: </span>
                   <a href="mailto:example@gmail.com" className="text-blue-600 hover:underline">
-                    chicken@g.bracu.ac.bd
+                    {userData.email}
                   </a>
                 </div>
                 <div>
                   <span className="text-gray-600 font-semibold">Phone: </span>
-                  <span>+880 0000-000 000</span>
+                  <span>{userData.phone_num}</span>
                 </div>
               </div>
             </div>
@@ -55,11 +107,11 @@ const AdminProfilePage = () => {
               <div className="space-y-1 text-xs">
                 <div>
                   <span className="text-gray-600 font-semibold">District: </span>
-                  <span>Jhenaidah</span>
+                  <span>{userData.district}</span>
                 </div>
                 <div>
                   <span className="text-gray-600 font-semibold">Subdistrict: </span>
-                  <span>Jhenaidah Sadar</span>
+                  <span>{userData.subdistrict}</span>
                 </div>
               </div>
             </div>
@@ -79,22 +131,54 @@ const AdminProfilePage = () => {
                 <div>
                   <div className="flex flex-col gap-2">
                     <div className="text-[#6B7280] text-sm">Basic Info</div>
-                    <CustomLabeledInput label={"Name"} labelBasis={""} inputBasis={""}></CustomLabeledInput>
-                    <CustomLabeledInput label={"Email"} labelBasis={""} inputBasis={""}></CustomLabeledInput>
-                    <CustomLabeledInput label={"Password"} labelBasis={""} inputBasis={""}></CustomLabeledInput>
+                    <CustomLabeledInput
+                      label={"Name"}
+                      labelBasis={""}
+                      inputBasis={""}
+                      value={userData.name}></CustomLabeledInput>
+                    <CustomLabeledInput
+                      label={"Email"}
+                      labelBasis={""}
+                      inputBasis={""}
+                      value={userData.email}></CustomLabeledInput>
+                    <CustomLabeledInput
+                      label={"Password"}
+                      labelBasis={""}
+                      inputBasis={""}
+                      value={""}></CustomLabeledInput>
                   </div>
                   <div className="flex mt-6 flex-col gap-2">
                     <div className="text-[#6B7280] text-sm">Phone Numbers</div>
-                    <CustomLabeledInput label={"Main phone"} labelBasis={""} inputBasis={""}></CustomLabeledInput>
-                    <CustomLabeledInput label={"Brother's phone"} labelBasis={""} inputBasis={""}></CustomLabeledInput>
+                    <CustomLabeledInput
+                      label={"Main phone"}
+                      labelBasis={""}
+                      inputBasis={""}
+                      value={userData.phone_num}></CustomLabeledInput>
+                    <CustomLabeledInput
+                      label={"Brother's phone"}
+                      labelBasis={""}
+                      inputBasis={""}
+                      value={userData.additional_phone_nums["Brother"]}></CustomLabeledInput>
                     <AddMorePhoneNumbersPopupTwoButton />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <div className="text-[#6B7280] text-sm">Address</div>
-                  <CustomLabeledInput label={"District"} labelBasis={""} inputBasis={""}></CustomLabeledInput>
-                  <CustomLabeledInput label={"Sub-district "} labelBasis={""} inputBasis={""}></CustomLabeledInput>
-                  <CustomLabeledInputBig label={"Address"} labelBasis={""} inputBasis={""}></CustomLabeledInputBig>
+                  <CustomLabeledInput
+                    label={"District"}
+                    labelBasis={""}
+                    inputBasis={""}
+                    value={userData.district}></CustomLabeledInput>
+                  <CustomLabeledInput
+                    label={"Sub-district "}
+                    labelBasis={""}
+                    inputBasis={""}
+                    value={userData.subdistrict}></CustomLabeledInput>
+                  <CustomLabeledInputBig
+                    label={"Address"}
+                    labelBasis={""}
+                    inputBasis={""}
+                    value={userData.address}></CustomLabeledInputBig>
                 </div>
               </div>
             </div>
@@ -109,6 +193,18 @@ const AdminProfilePage = () => {
             </div>
           </TabsContent>
         </Tabs>
+      </div>
+      <div className="me-4">
+        <div className="flex justify-end space-x-2 py-4">
+          <Button className="bg-yellow-500 text-white px-3 py-1">
+            <Undo className="" />
+            Undo
+          </Button>
+          <Button className="bg-blue-500 text-white px-3 py-1">
+            <LucideSave className="" />
+            Save
+          </Button>
+        </div>
       </div>
     </div>
   );
