@@ -1,0 +1,17 @@
+[
+  {
+    "fileName": "Document1.pdf",
+    "dateAdded": "2023-10-01",
+    "fileType": "PDF"
+  },
+  {
+    "fileName": "Image1.jpg",
+    "dateAdded": "2023-10-02",
+    "fileType": "Image"
+  },
+  {
+    "fileName": "Presentation.pptx",
+    "dateAdded": "2023-10-03",
+    "fileType": "Presentation"
+  }
+]

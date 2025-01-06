@@ -1,0 +1,17 @@
+[
+    {
+        "bankName": "Bangladesh Bank",
+        "hotline": "1-800-456-7890",
+        "website": "https://www.bb.org.bd"
+    },
+    {
+        "bankName": "Sonali Bank",
+        "hotline": "1-800-567-8901",
+        "website": "https://www.sonalibank.com.bd"
+    },
+    {
+        "bankName": "Dutch-Bangla Bank",
+        "hotline": "1-800-678-9012",
+        "website": "https://www.dutchbanglabank.com"
+    }
+]

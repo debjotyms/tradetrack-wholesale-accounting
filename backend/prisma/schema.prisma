@@ -1,0 +1,158 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // Ensure the DATABASE_URL environment variable is set
+}
+
+model owner {
+  id          Int    @id @default(autoincrement())
+  name        String @db.VarChar(50)
+  email       String @unique @db.VarChar(70)
+  password    String @db.VarChar(100)
+  phoneNumber String @unique @map("phone_num") @db.VarChar(15)
+  photoURL    String @map("photo_url") @db.VarChar(300)
+
+  supplyinfo  supplierInfo[]
+  bankclient  bankClient[]
+  statement   statement[]
+  transaction transaction[]
+}
+
+model supplierInfo {
+  id                Int      @id @default(autoincrement())
+  name              String   @db.VarChar(100)
+  phoneNumber       String   @unique @map("phone_num") @db.VarChar(15)
+  district          String   @db.VarChar(30)
+  subDistrict       String   @map("subdistrict") @db.VarChar(30)
+  address           String   @db.VarChar(200)
+  supplierAddedDate DateTime @default(now()) @map("date_added")
+  owner             owner    @relation(fields: [addedby], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  addedby           Int
+
+  additionalnumber additionalNumber[]
+  file             file[]
+  transaction      transaction[]
+
+  @@map("supply_info")
+}
+
+model additionalNumber {
+  id             Int           @id @default(autoincrement())
+  phoneUser      String        @map("phone_user") @db.VarChar(50)
+  phoneNumber    String        @map("phone_num") @db.VarChar(15)
+  supplyInfo     supplierInfo? @relation(fields: [supplierinfoId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  supplierinfoId Int?
+  bankclient     bankClient?   @relation(fields: [bankclientid], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  bankclientid   Int?
+
+  @@map("additional_phone_nums")
+}
+
+model file {
+  id             Int          @id @default(autoincrement())
+  fileName       String       @map("file_name") @db.VarChar(100)
+  fileType       String       @map("file_type") @db.VarChar(100)
+  fileURL        String       @map("file_url") @db.VarChar(300)
+  createdAt      DateTime     @default(now()) @map("date_added")
+  supplierinfo   supplierInfo @relation(fields: [supplierinfoid], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  supplierinfoid Int
+}
+
+model productCategory {
+  id               Int                @id @default(autoincrement())
+  productCategory  String             @map("product_category") @db.VarChar(30)
+  photoURL         String             @map("photo_url") @db.VarChar(300)
+  suppliercompinfo supplierCompInfo[]
+
+  @@map("product_category")
+}
+
+model supplierCompInfo {
+  id             Int    @id @default(autoincrement())
+  company        String @db.VarChar(50)
+  productID      Int    @unique @map("product_id")
+  modelNo        String @map("model_no") @db.VarChar(40)
+  category       String @db.VarChar(10) // grade A, B, C
+  stockAvailable Int    @map("stock_available")
+  photoURL       String @map("photo_url") @db.VarChar(300)
+
+  productCategory   productCategory @relation(fields: [productcategoryid], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  productcategoryid Int
+
+  @@map("supplier_comp_info")
+}
+
+model bank {
+  id          Int          @id @default(autoincrement())
+  bankName    String       @map("bank_name") @db.VarChar(50)
+  hotline     String       @db.VarChar(15)
+  website     String       @db.VarChar(100)
+  branchName  String       @db.VarChar(50)  @map("branch_name")
+  photoURL    String       @map("photo_url") @db.VarChar(300)
+  bankClients bankClient[]
+}
+
+model bankClient {
+  id               Int                @id @default(autoincrement())
+  name             String             @db.VarChar(100)
+  accountNo        String             @unique @map("account_no") @db.VarChar(20)
+  accountType      String             @default("Savings") @map("account_type") @db.VarChar(20)
+  district         String             @db.VarChar(30)
+  subDistrict      String             @map("subdistrict") @db.VarChar(30)
+  dateadded        DateTime           @default(now()) @map("date_added")
+  owner            owner              @relation(fields: [addedby], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  addedby          Int
+  bank             bank               @relation(fields: [bankid], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  bankid           Int
+  additionalnumber additionalNumber[]
+  statement        statement[]
+  transaction      transaction[]
+
+  @@map("bank_client")
+}
+
+model statement {
+  id              Int        @id @default(autoincrement())
+  date            DateTime   @default(now())
+  accountNo       String     @map("account_no") @db.VarChar(20)
+  transactionType String     @map("transaction_type") @db.VarChar(100)
+  reference       String     @db.VarChar(100)
+  description     String?    @db.VarChar(200)
+  quantity        Int        @default(1)
+  rate            Float      @default(0)
+  debit           Float      @default(0)
+  credit          Float      @default(0)
+  dateadded       DateTime   @default(now()) @map("date_added")
+  bankclient      bankClient @relation(fields: [bankclientid], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  bankclientid    Int
+  owner           owner      @relation(fields: [addedby], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  addedby         Int
+}
+
+model transaction {
+  id              Int      @id @default(autoincrement())
+  date            DateTime @default(now())
+  transactionType String   @map("transaction_type") @db.VarChar(100)
+  reference       String   @db.VarChar(100)
+  description     String?  @db.VarChar(200)
+  quantity        Int?
+  credit          Float    @default(0)
+  debit           Float    @default(0)
+  balance         Float    @default(0)
+
+  owner          owner         @relation(fields: [addedby], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  addedby        Int
+  bankclient     bankClient?   @relation(fields: [bankclientid], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  bankclientid   Int?
+  supplierinfo   supplierInfo? @relation(fields: [supplierinfoid], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  supplierinfoid Int?
+}

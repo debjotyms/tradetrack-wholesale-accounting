@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Jessica",
+        "accountNo": 79266389103,
+        "accountType": "Current",
+        "district": "Satkhira",
+        "subDistrict": "Kalaroa",
+        "date": "2023-05-06",
+        "addedBy": "Admin"
+    },
+    {
+        "name": "Michael",
+        "accountNo": 38197352158,
+        "accountType": "Savings",
+        "district": "Dhaka",
+        "subDistrict": "Uttara",
+        "date": "2024-07-11",
+        "addedBy": "Owner"
+    },
+    {
+        "name": "Emily",
+        "accountNo": 59462783109,
+        "accountType": "Savings",
+        "district": "Sylhet",
+        "subDistrict": "Golapganj",
+        "date": "2023-11-24",
+        "addedBy": "Manager"
+    },
+    {
+        "name": "William",
+        "accountNo": 47928530146,
+        "accountType": "Current",
+        "district": "Chattogram",
+        "subDistrict": "Hathazari",
+        "date": "2024-02-28",
+        "addedBy": "Admin"
+    },
+    {
+        "name": "Sophia",
+        "accountNo": 12345678901,
+        "accountType": "Savings",
+        "district": "Khulna",
+        "subDistrict": "Terokhada",
+        "date": "2023-06-15",
+        "addedBy": "Owner"
+    },
+    {
+        "name": "James",
+        "accountNo": 98765432109,
+        "accountType": "Current",
+        "district": "Rajshahi",
+        "subDistrict": "Puthia",
+        "date": "2024-09-30",
+        "addedBy": "Manager"
+    },
+
+    {
+        "name": "Liam",
+        "accountNo": 78234519283,
+        "accountType": "Savings",
+        "district": "Sylhet",
+        "subDistrict": "Beanibazar",
+        "date": "2022-08-03",
+        "addedBy": "Admin"
+    },
+    {
+        "name": "Olivia",
+        "accountNo": 90218476325,
+        "accountType": "Current",
+        "district": "Dhaka",
+        "subDistrict": "Gulshan",
+        "date": "2023-04-12",
+        "addedBy": "Manager"
+    },
+    {
+        "name": "Benjamin",
+        "accountNo": 56489321704,
+        "accountType": "Savings",
+        "district": "Khulna",
+        "subDistrict": "Batiaghata",
+        "date": "2023-01-25",
+        "addedBy": "Owner"
+    },
+    {
+        "name": "Emma",
+        "accountNo": 98231746508,
+        "accountType": "Savings",
+        "district": "Satkhira",
+        "subDistrict": "Satkhira Sadar",
+        "date": "2024-08-09",
+        "addedBy": "Admin"
+    },
+    {
+        "name": "Noah",
+        "accountNo": 30219874653,
+        "accountType": "Current",
+        "district": "Chattogram",
+        "subDistrict": "Anwara",
+        "date": "2023-10-11",
+        "addedBy": "Manager"
+    },
+    {
+        "name": "Ava",
+        "accountNo": 12345678901,
+        "accountType": "Savings",
+        "district": "Rajshahi",
+        "subDistrict": "Godagari",
+        "date": "2024-03-17",
+        "addedBy": "Owner"
+    }
+    
+]
