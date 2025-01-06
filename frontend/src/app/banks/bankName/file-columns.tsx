@@ -19,7 +19,10 @@ import Link from "next/link";
 import { DeleteConfirmationPopupButton } from "@/components/popups/delete-confirmation-popup-button";
 import AddButton from "@/components/buttons/add-button";
 import { AddStockPopUpButton } from "@/components/popups/add-stock-popup-button";
+<<<<<<< HEAD:frontend/src/app/banks/bankName/file-columns.tsx
 import ForwardButton from "@/components/buttons/forward-button";
+=======
+>>>>>>> c60b5d9721f54e9065df65d39fc701cb2cefb03c:src/app/stocks/stock-columns.tsx
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -115,6 +118,13 @@ export const stockColumns: ColumnDef<StockProduct>[] = [
         <ArrowUpDown className="ml-2 h-4 w-4" />
       </Button>
     ),
+  },
+  {
+    id: "add",
+    cell: ({ row }) => {
+      const product = row.original;
+      return <AddStockPopUpButton/>;
+    },
   },
   {
     id: "delete",

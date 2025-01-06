@@ -28,7 +28,10 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+<<<<<<< HEAD:frontend/package.json
     "js-cookie": "^3.0.5",
+=======
+>>>>>>> c60b5d9721f54e9065df65d39fc701cb2cefb03c:package.json
     "lucide-react": "^0.468.0",
     "next": "15.1.2",
     "react": "^18.2.0",
@@ -39,7 +42,10 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+<<<<<<< HEAD:frontend/package.json
     "@types/js-cookie": "^3.0.6",
+=======
+>>>>>>> c60b5d9721f54e9065df65d39fc701cb2cefb03c:package.json
     "@types/node": "^20",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",

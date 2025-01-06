@@ -35,7 +35,11 @@ ListItem.displayName = "ListItem";
 
 export function MainNav() {
   return (
+<<<<<<< HEAD:frontend/src/components/ui/main-nav.tsx
     <NavigationMenu className="max-w-full w-full px-8 bg-background border-b h-20 flex items-center justify-between mb-2">
+=======
+    <NavigationMenu className="max-w-full w-full px-8 bg-background border-b h-20 flex items-center justify-between">
+>>>>>>> c60b5d9721f54e9065df65d39fc701cb2cefb03c:src/components/ui/main-nav.tsx
       <div>
         <NavigationMenuList className="gap-6 flex items-center">
           <NavigationMenuItem>

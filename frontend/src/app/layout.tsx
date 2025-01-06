@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
 import "./globals.css";
+<<<<<<< HEAD:frontend/src/app/layout.tsx
 import {MainNav} from "@/components/ui/main-nav";
+=======
+import { MainNav } from "@/components/ui/main-nav";
+>>>>>>> c60b5d9721f54e9065df65d39fc701cb2cefb03c:src/app/layout.tsx
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,8 +16,13 @@ import {
 } from "@/components/ui/breadcrumb";
 import {Separator} from "@/components/ui/separator";
 import {SidebarInset, SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
+<<<<<<< HEAD:frontend/src/app/layout.tsx
 import {usePathname} from "next/navigation";
 import {AppSidebar} from "@/components/others/app-sidebar";
+=======
+import { usePathname } from "next/navigation";
+import { AppSidebar } from "@/components/others/app-sidebar";
+>>>>>>> c60b5d9721f54e9065df65d39fc701cb2cefb03c:src/app/layout.tsx
 
 interface LayoutProps {
   children: React.ReactNode;
