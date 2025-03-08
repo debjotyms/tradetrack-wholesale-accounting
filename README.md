@@ -1,7 +1,7 @@
 # Trade Tracker - Wholesale  
 A simple system to manage wholesale business transactions, finances, suppliers, and bank accounts.
 
-Live Demo of a early version of this project - https://kodebrain-balance.vercel.app/
+Live Demo of an early version of this project - https://kodebrain-balance.vercel.app/
 
 ---
 
