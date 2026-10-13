@@ -1,127 +1,75 @@
-# Trade Tracker - Wholesale  
-A simple system to manage wholesale business transactions, finances, suppliers, and bank accounts.
+# Trade Tracker - Wholesale
+> A full-stack system to manage wholesale business transactions, finances, suppliers, and bank accounts efficiently.
 
-Live Demo of an early version of this project - https://kodebrain-balance.vercel.app/
-
----
-
-## Features  
-
-### **Dashboard**  
-- Login/logout for owner  
-- View individual balances  
-- Check balances by date range
-
-![image](https://github.com/user-attachments/assets/f1e2804a-d05c-4cb0-81ed-7b7aed5c9afa)
-
-
-### **Suppliers**  
-- Add/edit/delete supplier categories  
-- Search categories  
-- Add supplied items to categories  
-- **Subpage**:  
-  - Search suppliers by name  
-  - View product ID, category, mobile, stock  
-  - Dynamically add products/columns  
-
-![image](https://github.com/user-attachments/assets/ef41f2c3-72ad-407f-98b7-c23f01a56e93)
-![image](https://github.com/user-attachments/assets/bb05e722-fea1-4997-b424-9adb40762366)
-
-
-
-### **Statements**  
-- Add individual transactions  
-- View all transactions in a central table  
-- Filter transactions by criteria  
-- View total balance (filtered or all transactions)
-
-![image](https://github.com/user-attachments/assets/5eb4dbde-b133-457a-86b6-40bdc69e1604)
-
-
-### **Banks**  
-- Add new banks  
-- Add accounts to banks  
-- **Bank Profile**:  
-  - Filter by username  
-  - View account details (account no, type, district, etc.)  
-- **Transactions**:  
-  - Filter by date, account, type, reference, etc.  
-  - Add transactions with quantity, rate, debit/credit  
-
-![image](https://github.com/user-attachments/assets/4932656e-a1db-4365-87ec-9193ce334d97)
-![image](https://github.com/user-attachments/assets/6fa5754e-da17-4146-a720-307bb0c16bf0)
-
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://kodebrain-balance.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Frontend-Next.js-black?logo=next.js)](https://nextjs.org/)
+[![Express.js](https://img.shields.io/badge/Backend-Express.js-gray?logo=express)](https://expressjs.com/)
+[![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue?logo=postgresql)](https://www.postgresql.org/)
 
 ---
 
-## Technologies  
-- **Frontend**: Next.js (React)  
-- **Backend**: Express.js  
-- **Database**: PostgreSQL (Hosted on Azure)  
+## Features
+
+### **Dashboard**
+- Secure login/logout authentication for the business owner.
+- Real-time individual balance tracking.
+- Custom date-range filtering for financial overviews.
+
+![Dashboard Preview](https://github.com/user-attachments/assets/f1e2804a-d05c-4cb0-81ed-7b7aed5c9afa)
+
+### **Suppliers**
+- Add, edit, and delete supplier categories.
+- Real-time category search.
+- Manage supplied items linked to categories.
+- **Subpage Features**:
+  - Search suppliers by name instantly.
+  - View product IDs, categories, contact numbers, and stock levels.
+  - Dynamically add new products and table columns.
+
+![Suppliers Preview 1](https://github.com/user-attachments/assets/ef41f2c3-72ad-407f-98b7-c23f01a56e93)
+![Suppliers Preview 2](https://github.com/user-attachments/assets/bb05e722-fea1-4997-b424-9adb40762366)
+
+### **Statements**
+- Log individual financial transactions.
+- Centralized transaction table view.
+- Comprehensive filtering by criteria.
+- Automatic total balance calculation (respects active filters or total dataset).
+
+![Statements Preview](https://github.com/user-attachments/assets/5eb4dbde-b133-457a-86b6-40bdc69e1604)
+
+### **Banks**
+- Add and manage multiple financial institutions.
+- Link multiple accounts to specific banks.
+- **Bank Profile**:
+  - Filter by username.
+  - View detailed account data (account numbers, types, districts, etc.).
+- **Transactions**:
+  - Filter by date, account, transaction type, reference, and more.
+  - Record transactions with quantity, rate, debit, and credit tracking.
+
+![Banks Preview 1](https://github.com/user-attachments/assets/4932656e-a1db-4365-87ec-9193ce334d97)
+![Banks Preview 2](https://github.com/user-attachments/assets/6fa5754e-da17-4146-a720-307bb0c16bf0)
 
 ---
 
-## Setup  
+## Tech Stack
 
-### 1. Clone the Repo  
-```bash  
-git clone https://github.com/your-username/trade-tracker-wholesale.git  
-cd trade-tracker-wholesale  
-```  
-
-### 2. Install Dependencies  
-**Client (Next.js):**  
-```bash  
-cd client  
-npm install  
-```  
-
-**Server (Express.js):**  
-```bash  
-cd server  
-npm install  
-```  
-
-### 3. Environment Variables  
-Create a `.env` file in the **server** folder:  
-```env  
-DATABASE_URL=your_azure_postgresql_connection_string  
-SECRET_KEY=your_jwt_secret_key  
-```  
-
-### 4. Run the App  
-**Start the server:**  
-```bash  
-cd server  
-npm start  
-```  
-
-**Start the client:**  
-```bash  
-cd client  
-npm run dev  
-```  
+- **Frontend**: Next.js, React, Tailwind CSS
+- **Backend**: Node.js, Express.js, JWT Authentication
+- **Database**: PostgreSQL (Hosted on Microsoft Azure)
+- **Deployment**: Vercel (Client)
 
 ---
 
-## Usage  
-1. **Login**: Access the dashboard at `http://localhost:3000`.  
-2. **Suppliers**:  
-   - Add categories/items via the "Suppliers" page.  
-   - Use the search bar to find categories.  
-3. **Banks**:  
-   - Add banks and accounts under the "Banks" section.  
-   - Manage transactions for each account.  
-4. **Statements**:  
-   - View/filter transactions and balances on the "Statements" page.  
+## Project Structure
 
----
-
-## Notes  
-- The database is hosted on **Azure PostgreSQL**. Ensure your connection string is correct.  
-- Test user credentials are provided in the `.env.example` file.  
-
----
-
-## License  
-MIT License
+```text
+trade-tracker-wholesale/
+├── client/                 # Next.js frontend application
+│   ├── public/             # Static assets
+│   └── src/                # Components, pages, and styles
+└── server/                 # Express.js backend API
+    ├── routes/             # API endpoint handlers
+    ├── models/             # Database queries & schemas
+    └── .env.example        # Sample environment variables
